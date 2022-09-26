@@ -1,7 +1,8 @@
+import { EventItem as EventItemType} from '../../helpers/api-util';
 import EventItem from './event-item';
 import classes from './event-list.module.css';
 
-function EventList(props) {
+function EventList(props: { items: EventItemType[] }) {
   const { items } = props;
 
   return (
