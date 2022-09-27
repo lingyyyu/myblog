@@ -4,6 +4,7 @@ import AddressIcon from '../icons/address-icon';
 import ArrowRightIcon from '../icons/arrow-right-icon';
 import classes from './event-item.module.css';
 import { EventItem as EventItemType } from '../../helpers/api-util';
+import Image from 'next/image';
 
 function EventItem(props: Partial<EventItemType> ) {
   const { title, image, date, location, id } = props;
@@ -18,7 +19,7 @@ function EventItem(props: Partial<EventItemType> ) {
 
   return (
     <li className={classes.item}>
-      <img src={'/' + image} alt={title} />
+      <Image src={'/' + image} alt={title} width={250} height={160} />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
